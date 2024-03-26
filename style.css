@@ -1,0 +1,327 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+.logo{
+    width: 150px;
+    /* user-select: none;s */
+    border-radius: 40px;
+    margin-left: 5%;
+    border: 3px solid #fff;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 100%;
+    max-height: 100px;
+    padding: 33px 9%;
+    color: #fff;
+    /* background: #000; */
+}
+.navList li{
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 60px;
+    /* border-bottom: 3px solid transparent; */
+    border-top: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    transition: all .55s ease;
+    padding: 5px;
+}
+.navList li:hover{
+    /* border-bottom: 3px solid; */
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-left: 3px solid;
+    border-radius: 30px;
+}
+#menu-icon{
+    font-size: 35px;
+    display: none;
+    z-index: 1001;
+    cursor: pointer;
+    /* margin-left: 0; */
+}
+.hero{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    /* background: linear-gradient(#fff,transparent)*/
+    background: url(images/butcher.png);
+    align-items: center;
+    display: flex;
+}
+.hero-text{
+    margin-left: 200px;
+}
+.hero-text a{
+    text-decoration: none;
+}
+.hero-text h3 span{
+    line-height: 120px;
+    color: #000;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Permanent Marker', cursive;
+    background: linear-gradient(#000,#000);
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* background-size: 0; */
+}
+.hero-text h3 span:first-child{
+    animation: quotes 5s linear infinite alternate;
+}
+@keyframes quotes {
+    0%{background-size: 0%;}
+    25%{background-size: 29%;}
+    55%{background-size: 57%;}
+    75%{background-size: 83%;}
+    100%{background-size: 101%;}
+}
+.hero-text h1{
+    line-height: 1;
+    color: #fff;
+    font-size: 90px;
+    font-weight: 400;
+    font-family: 'Permanent Marker', cursive;
+}
+.hero-text a{
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .50s ease;
+}
+.hero-text i{
+    margin-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.hero-text a:hover{
+    font-size: 15px;
+    background: transparent;
+    border: 1px solid white;
+    color: #fff;  
+    transform: translateX(8px);
+}
+.icons{
+    position: absolute;
+    top: 38%;
+    /* background: #000; */
+    margin: 0 5%;
+    font-size: 24px;
+    border-radius: 30px;
+}
+.icons a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 24px 0;
+    transition: all .50s ease;
+    /* background: #000; */
+}
+.icons a:hover{
+    transform: translateY(-5px);
+    /* font-size: 25px; */
+}
+.scroll-down{
+    position: absolute;
+    bottom: 8%;
+    right: 16%;
+}
+.scroll-down a{
+    text-decoration: none;
+    transition: all .50s ease;
+}
+.scroll-down i{
+    font-size: 40px;
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    border-radius: 50%;
+}
+.scroll-down a:hover{
+    font-size: 41px;
+    transform: translateY(-5px);
+}
+@media screen and (max-width: 1070px){  
+    .hero{
+        padding-left:1%;
+        width: 100%;
+        /* right: 0; */
+        /* background: url(images/billy1.png); */
+        object-fit: contain;
+        
+    }
+    header{
+        padding: 23px 7%;
+    }
+    .navList{
+        display: none;
+    }
+    .hero-text{
+        margin-left: 170px;
+    }
+    .hero-text h1{
+        font-weight: 300;
+        font-size: 75px;
+    }
+    .hero-text h3 span{
+        line-height: 90px;
+        font-size: 35px;
+        font-weight: 300;
+    }
+    .icons{
+        margin: 0 6%;
+    }
+    .scroll-down{
+        bottom: 7%;
+        right: 7%;
+    }
+    .hero-text a{
+        margin-top: 25px;
+        padding: 13px 28px;
+        border-radius: 35px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .hero-text i{
+        font-size: 12px;
+    }
+    .hero-text a:hover{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 1050px){
+    *{
+        transition: .3s;
+    }
+    #menu-icon{
+        display: flex;
+        border-radius: 10px;
+        /* margin-right: 25px; */
+    }
+    .navList{
+        width: 190px;
+        height: 35vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+        right: -100%;
+        overflow: hidden;
+        top: 100%;
+        transition: all .5s ease;
+        border: 5px solid;
+        z-index: 1000;
+    }
+    .navList li{
+        font-size: 13px;
+        font-weight: 400;
+        margin: 10px 50px;
+        /* background: #000; */
+        text-align: center;
+        /* padding: 5px; */
+        border: 1px transparent;
+        transition: all .60s ease;
+    }
+    .navList li:hover{
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 1px solid;
+        transform: translateY(-5px);
+    } 
+    .navList.open{
+        right: 0;
+    }
+}
+@media screen and (max-width: 760px){
+    .logo{
+        transition: all .60s ease;
+        width: 120px;
+        border: 2px solid #fff;
+    }
+    .hero-text{
+        margin-left: 150px;
+    }
+    .hero-text h1{
+        font-weight: 300;
+        font-size: 65px;
+    }
+    .hero-text h3 span{
+        line-height: 85px;
+        font-size: 25px;
+        font-weight: 300;
+    }
+}
+@media screen and (max-width: 480px){
+    header{
+        background: rgba(0, 0, 0, 0.4);
+        height: 8.5vh;
+    }
+    .hero{
+        background: url(images/billy1.png);
+        /* object-fit: cover; */
+    }
+    .logo{
+        margin-left: 10px;
+    }
+    .hero-text{
+        background: linear-gradient(transparent, #fff);
+        position: absolute;
+        margin: 0;
+        padding-left: 50px;
+        bottom: 2%;
+        z-index: 1000;
+        width: 455px;
+        padding-bottom: 20px;
+    }
+    .hero-text h1{
+        font-size: 60px;
+        width: 210px;
+    }
+    .hero-text h3 span{
+        line-height: 70px;
+        font-size: 23px;
+    }
+    .hero-text a{
+        background: black;
+        color: #fff;
+    }
+    .hero-text a:hover{
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+    }
+    .scroll-down{
+        display: none;
+    }
+    .icons{
+        right: 0%;
+    }
+    .icons a{
+        display: block; 
+        color: #000;
+        margin: 15px 0;
+    }
+}
