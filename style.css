@@ -5,6 +5,39 @@
     font-family: 'Poppins', sans-serif;
     user-select: none;
 }
+.openMenu{
+    display: none;
+    width: 190px;
+    height: 35vh;
+    position: absolute;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    overflow: hidden;
+    right: 3%;
+    top: 100%;
+    transition: all .5s ease;
+    border: 5px solid;
+}
+.openMenu li{
+    list-style: none;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 10px 50px;
+    /* background: #000; */
+    text-align: center;
+    padding: 5px;
+    border: 1px transparent;
+    border-radius: 20px;
+    transition: all .60s ease;
+}
+.openMenu li:hover{
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid;
+    transform: translateY(-5px);
+} 
 .logo{
     width: 150px;
     /* user-select: none;s */
@@ -27,6 +60,7 @@ header{
     color: #fff;
     /* background: #000; */
 }
+
 .navList li{
     cursor: pointer;
     list-style: none;
@@ -55,6 +89,7 @@ header{
     cursor: pointer;
     /* margin-left: 0; */
 }
+
 .hero{
     width: 100%;
     height: 100%;
@@ -169,8 +204,7 @@ header{
         width: 100%;
         /* right: 0; */
         /* background: url(images/billy1.png); */
-        object-fit: contain;
-        
+        background-repeat: round;
     }
     header{
         padding: 23px 7%;
@@ -178,8 +212,9 @@ header{
     .navList{
         display: none;
     }
+
     .hero-text{
-        margin-left: 170px;
+        margin-left: 180px;
     }
     .hero-text h1{
         font-weight: 300;
@@ -215,47 +250,50 @@ header{
     *{
         transition: .3s;
     }
+    .logo{
+        margin-left: 1%;
+    }
+    .hero-text{
+        margin-left: 50px;
+        /* margin-bottom: 0; */
+    }
+    .hero-text h3 span{
+        font-size: 20px;
+    }
+    .icons{
+        top: 70%;
+        /* background-color: #000; */
+    }
+    .icons a{
+        display: inline-block;
+        margin: 15px;
+    }
     #menu-icon{
         display: flex;
         border-radius: 10px;
         /* margin-right: 25px; */
     }
-    .navList{
+    /* .navList{
         width: 190px;
         height: 35vh;
         position: absolute;
-        display: flex;
+        display: none;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.4);
         border-radius: 20px;
-        right: -100%;
         overflow: hidden;
+        right: 3%;
         top: 100%;
         transition: all .5s ease;
         border: 5px solid;
-        z-index: 1000;
-    }
-    .navList li{
-        font-size: 13px;
-        font-weight: 400;
-        margin: 10px 50px;
-        /* background: #000; */
-        text-align: center;
-        /* padding: 5px; */
-        border: 1px transparent;
-        transition: all .60s ease;
-    }
-    .navList li:hover{
-        border-top: transparent;
-        border-left: transparent;
-        border-right: transparent;
-        border-bottom: 1px solid;
-        transform: translateY(-5px);
-    } 
-    .navList.open{
-        right: 0;
-    }
+        /* z-index: 1000; 
+    } */
+
+    
 }
+    
+
+
 @media screen and (max-width: 760px){
     .logo{
         transition: all .60s ease;
@@ -263,7 +301,7 @@ header{
         border: 2px solid #fff;
     }
     .hero-text{
-        margin-left: 150px;
+        margin-left: 50px;
     }
     .hero-text h1{
         font-weight: 300;
@@ -275,7 +313,7 @@ header{
         font-weight: 300;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 440px){
     header{
         background: rgba(0, 0, 0, 0.4);
         height: 8.5vh;
@@ -283,6 +321,8 @@ header{
     .hero{
         background: url(images/billy1.png);
         /* object-fit: cover; */
+        background-size: 350px;
+        background-repeat: round;
     }
     .logo{
         margin-left: 10px;
@@ -290,11 +330,11 @@ header{
     .hero-text{
         background: linear-gradient(transparent, #fff);
         position: absolute;
-        margin: 0;
-        padding-left: 50px;
-        bottom: 2%;
+        margin-left: 0;
+        padding-left: 30px;
+        bottom: 1%;
         z-index: 1000;
-        width: 455px;
+        /* width: 430px; */
         padding-bottom: 20px;
     }
     .hero-text h1{
@@ -303,7 +343,7 @@ header{
     }
     .hero-text h3 span{
         line-height: 70px;
-        font-size: 23px;
+        font-size: 20px;
     }
     .hero-text a{
         background: black;
@@ -317,11 +357,14 @@ header{
         display: none;
     }
     .icons{
-        right: 0%;
+        /* right: 0; */
+        /* background-color: #000; */
+        top: 35%;
+
     }
     .icons a{
-        display: block; 
         color: #000;
-        margin: 15px 0;
+        /* margin: 15px 0; */
+        display: block;
     }
 }

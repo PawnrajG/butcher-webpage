@@ -1,9 +1,22 @@
-let menuIcon = document.getElementById('#menu-icon');
-let navList = document.getElementsByClassName('.navList');
-function showMenu(){
-  menuIcon.classList.toggle("bx-x");
-  navList.classList.toggle("open");
+const initApp = () =>{
+const hamburgerBtn = document.getElementById('menu-icon');
+const mobileMenu = document.getElementById('menu-items');
+
+const toggleMenu = () =>{
+    hamburgerBtn.classList.toggle('bx-x');
+    if(mobileMenu.style.display === 'flex'){
+      mobileMenu.style.display = 'none';
+    }
+    else{
+      mobileMenu.style.display = 'flex';
+    }
+    console.log(mobileMenu);
 }
+
+hamburgerBtn.addEventListener('click', toggleMenu);
+}
+
+document.addEventListener('DOMContentLoaded', initApp)
 
 const sr = ScrollReveal ({
   distance: '65px',
